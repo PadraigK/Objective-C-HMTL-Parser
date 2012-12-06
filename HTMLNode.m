@@ -385,6 +385,11 @@ NSString * allNodeContents(xmlNode*node)
 	return allNodeContents(_node);
 }
 
+-(NSString *)description
+{
+    return [self rawContents];
+}
+
 NSString * rawContentsOfNode(xmlNode * node)
 {	
 	xmlBufferPtr buffer = xmlBufferCreateSize(1000);
